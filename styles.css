@@ -1,0 +1,1028 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+
+/* INICIO VIDEO /* 
+/* Configuração do contêiner de vídeo */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Coloca o vídeo atrás do conteúdo */
+}
+
+/* Estilizando o próprio vídeo */
+video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /* Faz o vídeo cobrir toda a tela */
+}
+
+/* FIM VIDEO */
+
+/* INICIO LOGO*/
+/* INICIO IMAGEM LOGO */
+img {
+    width: 200px;
+    height: 200px;
+
+}
+
+/* FIM IMAGEM LOGO */
+
+@keyframes moverLogo {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    color: white;
+    /* Define a cor do texto */
+
+}
+
+/* Nome da Loja com animação de cor */
+.nome-loja {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: corPiscando 1.5s ease-in-out infinite;
+
+}
+
+/* Animação da cor do nome da loja */
+@keyframes corPiscando {
+
+    0%,
+    100% {
+        color: #fff;
+    }
+
+    50% {
+        color: #ffcc00;
+    }
+}
+
+/* Estilo e animação da estrela */
+.estrela {
+    font-size: 2.5rem;
+    animation: rodando 2s linear infinite;
+}
+
+/* Animação da rotação da estrela */
+@keyframes rodando {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* FIM LOGO*/
+
+/* INICIO BARRA DE PESQUISA*/
+/* Barra de Pesquisa */
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid rgb(196, 184, 78);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 05px;
+}
+
+/* Campo de pesquisa */
+.campo-pesquisa {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Botão de pesquisa */
+.botao-pesquisa {
+    background-color: rgb(236, 217, 38);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover no botão */
+.botao-pesquisa:hover {
+    background-color: rgb(196, 184, 78);
+}
+
+/* FIM BARRA DE PESQUISA*/
+
+/* INICIO INCLUSÃO DE PÁGINAS */
+.descida {
+    background-color: rgb(255, 215, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: -5px;
+
+}
+
+/* INICIO SOBREPOR IMAGEM/VIDEO DE FUNDO */
+li {
+
+    z-index: 1
+}
+
+/* FIM SOBREPOR IMAGEM/VIDEO DE FUNDO */
+
+/* FIM INCLUSÃO DE PÁGINAS */
+
+
+
+
+/* INICIO CABEÇALHO */
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 20px;
+    /* Espaço entre o logo e a barra de pesquisa */
+    margin-top: 20px;
+    /* Ajuste de margem se precisar */
+    text-align: center;
+    margin: 20px 0;
+
+}
+
+
+
+
+
+
+
+
+
+ul {
+    background: rgb(196, 184, 78);
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* FIM CABEÇALHO */
+
+/* INICIO DROPBTN */
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: beige;
+    padding: 01px 01px;
+    text-decoration: none;
+    text-align: center;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background: rgb(196, 184, 78);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 150px;
+}
+
+.dropdown-content a {
+    color: black;
+    display: block;
+    text-align: left;
+    border: 1px solid rgb(207, 207, 207);
+}
+
+.dropdown-content a:hover {
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    z-index: 10;
+}
+
+.btn-prev {
+    left: 10px;
+}
+
+.btn-next {
+    right: 10px;
+}
+
+
+/* FIM DROPBTN */
+
+/* INICIO VOLTAR AO TOPO */
+/* Estilo do botão "Voltar ao Topo" */
+.botao-topo {
+    display: none;
+    /* Inicialmente escondido */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 05px 05px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-topo:hover {
+    background-color: #ffcc00;
+}
+
+/* FIM VOLTAR AO TOPO */
+
+
+/* INICIO CARROSSEL */
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagem-carrossel {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+/* Botões de Navegação */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Indicadores */
+.indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicador {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.indicador.active {
+    background-color: #ffcc00;
+}
+
+/* FIM CARROSSEL */
+
+/* INICIO SOBRE NÓS */
+.sobre-nos {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.sobre-nos h1 {
+    font-size: 2.5em;
+    color: #b22222;
+    margin-bottom: 10px;
+}
+
+.sobre-nos h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.sobre-nos p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.sobre-nos {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* FIM SOBRE NÓS */
+
+/* INICIO VIDEO PAG SOBRE NOS /* 
+/* Configuração do contêiner de vídeo */
+.SN {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Coloca o vídeo atrás do conteúdo */
+
+}
+
+/* Estilizando o próprio vídeo */
+video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /* Faz o vídeo cobrir toda a tela */
+}
+
+/* FIM VIDEO PAG SOBRE NOS*/
+
+
+/*  INICIO DICAS INSPIRAÇÕES */
+.dicas-inspiracoes {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dicas-inspiracoes h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.dica {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #ffcc00;
+    ;
+    /* Barra lateral para destaque */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.dica h2 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 0;
+}
+
+.dica p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+/*  FIM DICAS INSPIRAÇÕES */
+
+
+/*  INICIO VIDIO CENTRALIZADO DE DICAS INSPIRAÇÕES */
+
+.centralizar {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    /* Altura total da janela */
+
+
+}
+
+
+/*  FIM VIDIO CENTRALIZADO DE DICAS INSPIRAÇÕES */
+
+
+
+/*  INICIO CONTATO */
+.contato {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contato h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.info-contato {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-contato label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-contato button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00;
+    ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.form-contato button:hover {
+    background-color: #ffcc00;
+    ;
+}
+
+/*  FIM CONTATO */
+
+
+/*  INICIO SERVICOS */
+.servicos {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servicos h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.descricao-servicos {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.servico {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #ffcc00;
+    /* Barra lateral para destaque */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.servico h2 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 0;
+}
+
+.servico p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+/*  FIM SERVICOS */
+
+/* INICIO IMAGEM SERVICOS */
+.decoracao {
+
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    gap: 20px;
+    border-radius: 50%;
+    border: none;
+
+
+}
+
+/* FIM IMAGEM SERVICOS */
+
+/*  INICIO SERVICOS  WPP*/
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+.whatsapp-link img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+/*  FIM SERVICOS  WPP*/
+
+
+.Instagram {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    width: 180px;
+    height: 60px;
+    z-index: 100;
+    flex-wrap: wrap;
+
+}
+
+.Instagram img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+.youtube {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    width: 280px;
+    height: 60px;
+    z-index: 100;
+    flex-wrap: wrap;
+
+}
+
+.youtube img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+
+
+/*  INICIO CONTAGEM  */
+.contagem-regressiva {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #d32f2f;
+    margin: 0 auto;
+}
+
+#contador {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tempo {
+    background-color: #f7f0e6;
+    /* Fundo suave para as caixas */
+    border-radius: 10px;
+    padding: 15px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#dias,
+#horas,
+#minutos,
+#segundos {
+    font-size: 2em;
+    font-weight: bold;
+    color: #b22222;
+}
+
+.unidade {
+    font-size: 0.9em;
+    color: #444;
+    margin-top: 5px;
+    /* Espaço entre o número e a unidade */
+}
+
+/*  FIM CONTAGEM */
+
+
+/*  INICIO PROMOÇÕES */
+
+
+.promo {
+    background-color: #b22222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 20px
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+
+
+
+}
+
+
+.promocoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.produto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.produto h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.preco-original {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1em;
+}
+
+.preco-promocional {
+    font-size: 1.5em;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+/*  FIM PROMOÇÕES */
+
+/* INICIO NATAL SOLIDARIO */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header h1 {
+    text-align: center;
+
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 20px
+}
+
+.descricao-campanha {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do contador */
+.contador {
+    margin: 20px;
+    font-size: 1.2em;
+    text-align: center;
+
+
+}
+
+#contador {
+    font-weight: bold;
+    color: #5cb85c;
+}
+
+.doacao {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 900px;
+    width: 90%;
+    /* Ajusta a largura do contêiner */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Centraliza horizontal e verticalmente */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); /* Ajusta para o centro da página */
+    padding-top: 5px;
+    margin-top: 250px
+}
+
+/* FIM NATAL SOLIDARIO */
+
+/* INICIO APADRINHADOS */
+
+/* Estilo do cabeçalho */
+.apadrinhados {
+    padding: 20px;
+    background-color: #ffcc00;
+    text-align: center;
+}
+
+h1 {
+    color: #b30000;
+}
+
+/* Contêiner para perfis de crianças */
+.apadrinhados-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+   
+}
+
+#child-profile {/* botão Contêiner  */
+    display: flex; /* Dispor elementos em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite quebra para a próxima linha, se necessário */
+    gap: 20px; /* Espaçamento entre os elementos */
+    padding: 20px;
+    
+    
+}
+
+
+.child-profile {/* botão Contêiner  */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    
+}
+
+#child-profile img {
+    width: 100%;
+    border-radius: 20px;
+    height: 190px;
+    border-radius: 20px;
+    transition: transform 0.2s;
+    
+}
+
+.highlight {
+    transform: scale(1.3);
+    border: 3px solid #ff0000;
+}
+
+/* Botão de apadrinhar */
+.apadrinhar-btn {
+    background-color: #ffcc00; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.apadrinhar-btn:hover,
+.sorteio-btn:hover {
+    background-color:#ff6347 ;
+    
+}
+
+
+/* FIM APADRINHADOS */
+
+
+
+.carousel {
+
+
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-track img {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scroll {
+    0% {
+
+
+        transform: translateX(0);
+    }
+
+
+    100% {
+
+
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+/* INICIO RODAPÉ */
+footer {
+    background: rgb(196, 184, 78);
+    color: #fffefe;
+    text-align: center;
+    padding: 05px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+/* FIM RODAPÉ */
